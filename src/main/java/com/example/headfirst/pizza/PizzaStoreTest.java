@@ -3,9 +3,12 @@ package com.example.headfirst.pizza;
 public class PizzaStoreTest {
     public static void main(String[] args) {
         PizzaStore nyStore = new NYPizzaStore();
-        nyStore.orderPizza("Veggie");
+        Pizza nyPizza = nyStore.orderPizza("Cheese");
+        System.out.println("nyPizza======"+nyPizza.getName());
 
         PizzaStore chicagoStore = new ChicagoPizzaStore();
-        chicagoStore.orderPizza("Veggie");
+        Pizza chicagoPizza = chicagoStore.orderPizza("Cheese");
+        System.out.println("chicagoPizza==========="+chicagoPizza.getName());
+
     }
 }

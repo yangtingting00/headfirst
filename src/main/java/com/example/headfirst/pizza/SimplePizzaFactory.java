@@ -1,5 +1,6 @@
 package com.example.headfirst.pizza;
 
+@Deprecated
 public class SimplePizzaFactory {
     Pizza pizza = null;
     public Pizza createPizza(String type){
