@@ -1,7 +1,7 @@
 package com.example.headfirst.pizza;
 
-public class ChicagoStylePizza extends Pizza {
-    public ChicagoStylePizza() {
+public class ChicagoStyleCheesePizza extends Pizza {
+    public ChicagoStyleCheesePizza() {
         name = "Chicago Style Deep Dish Cheese Pizza";
         dough = "Extra Thick Crush Dough";
         sauce = "Plum Tomato Sauce";
