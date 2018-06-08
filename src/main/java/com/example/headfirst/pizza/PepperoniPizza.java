@@ -1,8 +1,16 @@
 package com.example.headfirst.pizza;
 
-@Deprecated
 public class PepperoniPizza extends Pizza {
-    public PepperoniPizza() {
-        System.out.println("Pepperoni Pizza");
+    PizzaIngredientFactory ingredientFactory;
+    public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
+    }
+
+    @Override
+    public void prepare() {
+        System.out.println("preparing " + name);
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        cheese = ingredientFactory.createCheese();
     }
 }

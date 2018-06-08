@@ -1,5 +1,7 @@
 package com.example.headfirst.pizza;
 
+import com.example.headfirst.pizza.ingredient.*;
+
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDough() {

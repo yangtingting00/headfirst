@@ -1,26 +1,21 @@
 package com.example.headfirst.pizza;
 
-import java.util.ArrayList;
+import com.example.headfirst.pizza.ingredient.*;
 
-public class Pizza {
+public abstract class Pizza {
 
     String name;    //名称
-    String dough;   //面团
-    String sauce;   //酱料
-    ArrayList toppings = new ArrayList();   //作料
+    Dough dough;   //面团
+    Sauce sauce;   //酱料
+    Veggies veggies[];  //蔬菜
+    Cheese cheese;  //芝士
+    Pepperoni pepperoni;    //意大利辣香肠
+    Clams clams;    //蛤蚌
 
     /**
      * 准备
      */
-    public void prepare(){
-        System.out.println("Prepare "+name);
-        System.out.println("Tossing dough:"+dough);
-        System.out.println("Adding sauce:"+sauce);
-        System.out.println("Adding toppings:");
-        for (int i = 0; i < toppings.size(); i++) {
-            System.out.println("    "+toppings.get(i));
-        }
-    }
+    public abstract void prepare();
 
     /**
      * 烤

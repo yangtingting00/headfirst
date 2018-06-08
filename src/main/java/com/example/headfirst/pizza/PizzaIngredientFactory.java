@@ -1,5 +1,7 @@
 package com.example.headfirst.pizza;
 
+import com.example.headfirst.pizza.ingredient.*;
+
 public interface PizzaIngredientFactory {
     public Dough createDough();
     public Sauce createSauce();
