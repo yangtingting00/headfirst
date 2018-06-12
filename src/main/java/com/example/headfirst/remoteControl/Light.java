@@ -1,16 +1,16 @@
 package com.example.headfirst.remoteControl;
 
 public class Light {
-    String name;
+    String location;
 
-    public Light(String name) {
-        this.name = name;
+    public Light(String location) {
+        this.location = location;
     }
 
     public void on(){
-        System.out.println(name+" light is On");
+        System.out.println(location+" light is On");
     }
     public void off(){
-        System.out.println(name+" light is Off");
+        System.out.println(location+" light is Off");
     }
 }
