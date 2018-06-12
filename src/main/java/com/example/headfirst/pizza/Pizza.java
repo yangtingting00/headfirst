@@ -10,7 +10,7 @@ public abstract class Pizza {
     Veggies veggies[];  //蔬菜
     Cheese cheese;  //芝士
     Pepperoni pepperoni;    //意大利辣香肠
-    Clams clams;    //蛤蚌
+    Clams clam;    //蛤蚌
 
     /**
      * 准备

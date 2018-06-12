@@ -7,6 +7,8 @@ public class NYPizzaStore extends PizzaStore {
         PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
         if (type.equals("Cheese")){
             pizza =  new CheesePizza(ingredientFactory);
+        } else if (type.equals("Clam")){
+            pizza = new ClamPizza(ingredientFactory);
         }
         return pizza;
     }
