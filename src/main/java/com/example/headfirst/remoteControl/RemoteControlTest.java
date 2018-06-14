@@ -4,10 +4,20 @@ public class RemoteControlTest {
     public static void main(String[] args) {
         RemoteControl remote = new RemoteControl();
         CeilingFan ceilingFan = new CeilingFan("Living Room");
+        Light livingRoomLight = new Light("Living Room");
+
+
         CeilingFanHighCommand highCommand = new CeilingFanHighCommand(ceilingFan);
         CeilingFanMediumCommand mediumCommand = new CeilingFanMediumCommand(ceilingFan);
         CeilingFanLowCommand lowCommand = new CeilingFanLowCommand(ceilingFan);
         CeilingFanOffCommand offCommand = new CeilingFanOffCommand(ceilingFan);
+        LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
+        LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+
+        /*Command[] partyOn = {livingRoomLightOn,highCommand};
+        Command[] partyOff = {livingRoomLightOff,offCommand};
+        MacroCommand partyOnCommand = new MacroCommand(partyOn);
+        MacroCommand partyOffCommand = new MacroCommand(partyOff);*/
 
         remote.setCommand(0,highCommand,offCommand);
         remote.setCommand(1,mediumCommand,offCommand);
@@ -31,16 +41,10 @@ public class RemoteControlTest {
         System.out.println(remote);
 
         remote.onButtonWasPushed(0);
-        remote.offButtonWasPushed(0);
-        System.out.println(remote);
-        remote.undoButtonWasPushed();
         remote.onButtonWasPushed(1);
-        remote.offButtonWasPushed(1);
-        System.out.println(remote);
-        remote.undoButtonWasPushed();
         remote.onButtonWasPushed(2);
-        remote.offButtonWasPushed(2);
-        System.out.println(remote);
+        remote.undoButtonWasPushed();
+        remote.undoButtonWasPushed();
         remote.undoButtonWasPushed();
     }
 }
