@@ -18,7 +18,6 @@ public class RemoteControl {
         }
 //        undoCommand = noCommand;
         undoCommands = new Stack<Command>();
-        undoCommands.push(noCommand);
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand){
@@ -39,7 +38,9 @@ public class RemoteControl {
 
     public void undoButtonWasPushed(){
 //        undoCommand.undo();
-        undoCommands.pop().undo();
+        if (undoCommands.size()>0){
+            undoCommands.pop().undo();
+        }
     }
 
     @Override
