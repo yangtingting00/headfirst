@@ -22,8 +22,7 @@ public class Waitress {
             MenuItem menuItem = (MenuItem) iterator.next();
             System.out.print(menuItem.getName()+",");
             System.out.print(menuItem.getPrice());
-            System.out.println(menuItem.getDescription());
-            System.out.println(menuItem.isVegetarian()?"素食":"");
+            System.out.println(menuItem.getDescription()+(menuItem.isVegetarian()?"(素食)":""));
         }
     }
 }
