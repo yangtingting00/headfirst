@@ -2,6 +2,7 @@ package com.example.headfirst.restaurant;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class PancakeHouseIterator implements Iterator {
     ArrayList menuItems;
     int position = 0;

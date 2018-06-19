@@ -1,10 +1,12 @@
 package com.example.headfirst.restaurant;
 
-public class Waitress {
-    DinerMenu dinerMenu;
-    PancakeHouseMenu pancakeHouseMenu;
+import java.util.Iterator;
 
-    public Waitress(DinerMenu dinerMenu, PancakeHouseMenu pancakeHouseMenu) {
+public class Waitress {
+    Menu dinerMenu;
+    Menu pancakeHouseMenu;
+
+    public Waitress(Menu dinerMenu, Menu pancakeHouseMenu) {
         this.dinerMenu = dinerMenu;
         this.pancakeHouseMenu = pancakeHouseMenu;
     }
