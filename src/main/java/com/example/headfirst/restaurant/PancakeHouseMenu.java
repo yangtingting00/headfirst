@@ -1,9 +1,9 @@
 package com.example.headfirst.restaurant;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class PancakeHouseMenu implements Menu {
+@Deprecated
+public class PancakeHouseMenu {
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -19,7 +19,4 @@ public class PancakeHouseMenu implements Menu {
         menuItems.add(menuItem);
     }
 
-    public Iterator createIterator(){
-        return menuItems.iterator();
-    }
 }

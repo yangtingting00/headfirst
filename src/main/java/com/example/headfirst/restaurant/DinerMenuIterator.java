@@ -2,6 +2,7 @@ package com.example.headfirst.restaurant;
 
 import java.util.Iterator;
 
+@Deprecated
 public class DinerMenuIterator implements Iterator {
     MenuItem[] menuItems;
     int position = 0;
