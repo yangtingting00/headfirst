@@ -1,13 +1,19 @@
 package com.example.headfirst.candyStore;
 
 public class WinnerState implements State {
+    GumballMachine gumballMachine;
+
+    public WinnerState(GumballMachine gumballMachine) {
+        this.gumballMachine = gumballMachine;
+    }
+
     @Override
-    public void insertQuater() {
+    public void insertQuarter() {
 
     }
 
     @Override
-    public void ejectQuater() {
+    public void ejectQuarter() {
 
     }
 
