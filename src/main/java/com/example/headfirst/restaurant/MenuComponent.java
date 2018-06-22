@@ -1,5 +1,7 @@
 package com.example.headfirst.restaurant;
 
+import java.util.Iterator;
+
 public abstract class MenuComponent {
     /***************************组合方法begin*********************************/
     public void add(MenuComponent menuComponent){
@@ -30,4 +32,6 @@ public abstract class MenuComponent {
         throw new UnsupportedOperationException();
     }
     /*****************************操作方法end************************************/
+
+    public abstract Iterator createIterator();
 }

@@ -18,5 +18,6 @@ public class MenuTestDriver {
 
         Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
+        waitress.printVegetarianMenu();
     }
 }

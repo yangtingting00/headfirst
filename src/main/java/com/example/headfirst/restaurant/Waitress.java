@@ -1,16 +1,29 @@
 package com.example.headfirst.restaurant;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Waitress {
-    MenuComponent menuComponent;
+    MenuComponent allMenus;
 
     public Waitress(MenuComponent menuComponent) {
-        this.menuComponent = menuComponent;
+        this.allMenus = menuComponent;
     }
 
     public void printMenu(){
-        menuComponent.print();
+        allMenus.print();
+    }
+
+    public void printVegetarianMenu(){
+        Iterator iterator = allMenus.createIterator();
+        System.out.println("\nVEGETARIAN MENU\n------");
+        while (iterator.hasNext()){
+            MenuComponent menuComponent = (MenuComponent) iterator.next();
+            try {
+                if (menuComponent.isVegetarian()){
+                    menuComponent.print();
+                }
+            } catch (UnsupportedOperationException e) {
+            }
+        }
     }
 }
