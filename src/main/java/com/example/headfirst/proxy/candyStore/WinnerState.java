@@ -1,4 +1,4 @@
-package com.example.headfirst.candyStore;
+package com.example.headfirst.proxy.candyStore;
 
 public class WinnerState implements State {
     GumballMachine gumballMachine;

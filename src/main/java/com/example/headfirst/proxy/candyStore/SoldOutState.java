@@ -1,4 +1,4 @@
-package com.example.headfirst.candyStore;
+package com.example.headfirst.proxy.candyStore;
 
 public class SoldOutState implements State {
     transient GumballMachine gumballMachine;

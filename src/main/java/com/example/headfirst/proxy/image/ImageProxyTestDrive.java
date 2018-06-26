@@ -1,9 +1,8 @@
-package com.example.headfirst.proxy;
+package com.example.headfirst.proxy.image;
 
 import javax.swing.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Enumeration;
 import java.util.Hashtable;
 
 public class ImageProxyTestDrive {

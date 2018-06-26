@@ -1,4 +1,4 @@
-package com.example.headfirst.proxy;
+package com.example.headfirst.proxy.image;
 
 import java.awt.*;
 import javax.swing.*;

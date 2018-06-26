@@ -1,4 +1,4 @@
-package com.example.headfirst.candyStore;
+package com.example.headfirst.proxy.candyStore;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;

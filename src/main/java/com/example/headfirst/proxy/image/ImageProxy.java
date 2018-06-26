@@ -1,4 +1,4 @@
-package com.example.headfirst.proxy;
+package com.example.headfirst.proxy.image;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

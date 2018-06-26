@@ -1,4 +1,4 @@
-package com.example.headfirst.proxy;
+package com.example.headfirst.proxy.remote;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

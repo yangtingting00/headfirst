@@ -1,4 +1,4 @@
-package com.example.headfirst.proxy;
+package com.example.headfirst.proxy.remote;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
