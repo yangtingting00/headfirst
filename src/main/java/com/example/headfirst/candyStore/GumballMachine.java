@@ -1,9 +1,12 @@
 package com.example.headfirst.candyStore;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
 /**
  * 糖果机
  */
-public class GumballMachine {
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
 
     State soldOutState;
     State soldState;
@@ -16,7 +19,7 @@ public class GumballMachine {
     int count;
     String location;
 
-    public GumballMachine(String location,int count) {
+    public GumballMachine(String location,int count) throws RemoteException {
         soldOutState = new SoldOutState(this);
         soldState = new SoldState(this);
         noQuarterState = new NoQuarterState(this);

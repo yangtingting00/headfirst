@@ -1,5 +1,9 @@
 package com.example.headfirst.candyStore;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
         int count = 0;
@@ -8,11 +12,20 @@ public class GumballMachineTestDrive {
             System.exit(1);
         }
         count = Integer.parseInt(args[1]);
-        GumballMachine gumballMachine = new GumballMachine(args[0],count);
-        GumballMonitor monitor = new GumballMonitor(gumballMachine);
+        GumballMachine gumballMachine = null;
+        try {
+            gumballMachine = new GumballMachine(args[0],count);
+            Naming.rebind("//"+args[0]+"/gumballMachine",gumballMachine);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        /*GumballMonitor monitor = new GumballMonitor(gumballMachine);
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
-        monitor.report();
+        monitor.report();*/
 
     }
 }
