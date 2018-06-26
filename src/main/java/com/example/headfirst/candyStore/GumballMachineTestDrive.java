@@ -22,10 +22,6 @@ public class GumballMachineTestDrive {
             e.printStackTrace();
         }
 
-        /*GumballMonitor monitor = new GumballMonitor(gumballMachine);
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        monitor.report();*/
 
     }
 }
