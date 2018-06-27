@@ -6,7 +6,7 @@ import java.net.URL;
 import java.util.Hashtable;
 
 /**
- * 虚拟代理
+ * 虚拟代理+状态模式
  */
 public class ImageProxyTestDrive {
     ImageComponent imageComponent;
