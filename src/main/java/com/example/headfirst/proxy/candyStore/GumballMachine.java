@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
- * 糖果机
+ * 糖果机(远程代理)
  */
 public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
 

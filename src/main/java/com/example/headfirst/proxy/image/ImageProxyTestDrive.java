@@ -5,6 +5,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Hashtable;
 
+/**
+ * 虚拟代理
+ */
 public class ImageProxyTestDrive {
     ImageComponent imageComponent;
     /*JMenuBar menuBar;
