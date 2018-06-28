@@ -4,6 +4,7 @@ public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
         AbstractDuckFactory duckFactory = new CountingDuckFactory();
+//        AbstractDuckFactory duckFactory = new DuckFactory();
         simulator.simulator(duckFactory);
     }
 
