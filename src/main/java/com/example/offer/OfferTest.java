@@ -1,6 +1,10 @@
 package com.example.offer;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class OfferTest {
+    private static Map<Integer,Integer> indexForInOrder = new HashMap<>();
     public static void main(String[] args) {
         //查找数组中重复数字
         int[] num = {2,3,1,0,4,5};
@@ -19,7 +23,13 @@ public class OfferTest {
 
         //替换空格
         String s = "A B C";
-        System.out.println(replaceSpace(new StringBuffer(s)));
+//        System.out.println(replaceSpace(new StringBuffer(s)));
+        int[] preOrder = {1,2,4,7,3,5,6,8};
+        int[] inOrder = {4,7,2,1,5,3,8,6};
+        BinaryTreeNode binaryTreeNode = construct(preOrder,inOrder);
+//        preOrderTraverse(binaryTreeNode);
+        inOrderTraverse(binaryTreeNode);
+
     }
 
     /**
@@ -106,4 +116,69 @@ public class OfferTest {
         }
         return str.toString();
     }
+
+    /**
+     * 重建二叉树
+     * @param preOrder
+     * @param inOrder
+     * @return
+     */
+    public static BinaryTreeNode construct(int[] preOrder, int[] inOrder){
+        for (int i = 0; i < inOrder.length; i++) {
+            indexForInOrder.put(inOrder[i],i);
+        }
+        return construct(preOrder,0,preOrder.length-1,0);
+    }
+
+    private static BinaryTreeNode construct(int[] preOrder,int startPre,int entPre,int startIn){
+        if (startPre > entPre)
+            return null;
+        BinaryTreeNode binaryTreeNode = new BinaryTreeNode();
+        binaryTreeNode.value = preOrder[startPre];
+        int indexForIn = indexForInOrder.get(preOrder[startPre]);
+        int leftTreeSize = indexForIn - startIn;
+        binaryTreeNode.leftNode = construct(preOrder,startPre+1,startPre+leftTreeSize,startIn);
+        binaryTreeNode.rightNode = construct(preOrder,startPre+leftTreeSize+1,entPre,startIn+leftTreeSize+1);
+
+        return binaryTreeNode;
+    }
+
+    /**
+     * 前序打印二叉树
+     * @param binaryTreeNode
+     */
+    public static void preOrderTraverse(BinaryTreeNode binaryTreeNode) {
+        if(binaryTreeNode==null)
+            return;
+        System.out.println(binaryTreeNode.value);
+        preOrderTraverse(binaryTreeNode.leftNode);
+        preOrderTraverse(binaryTreeNode.rightNode);
+    }
+
+    /**
+     * 中序打印二叉树
+     * @param binaryTreeNode
+     */
+    public static void inOrderTraverse(BinaryTreeNode binaryTreeNode) {
+        if(binaryTreeNode==null)
+            return;
+        inOrderTraverse(binaryTreeNode.leftNode);
+        System.out.println(binaryTreeNode.value);
+        inOrderTraverse(binaryTreeNode.rightNode);
+    }
+
+    /**
+     * 后续打印二叉树
+     * @param binaryTreeNode
+     */
+    public static void postOrderTraverse(BinaryTreeNode binaryTreeNode) {
+        if(binaryTreeNode==null)
+            return;
+        postOrderTraverse(binaryTreeNode.leftNode);
+        postOrderTraverse(binaryTreeNode.rightNode);
+        System.out.println(binaryTreeNode.value);
+    }
+
+
+
 }
